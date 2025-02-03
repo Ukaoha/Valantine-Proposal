@@ -4,7 +4,7 @@ const ProposalSchema = new mongoose.Schema({
     creatorName: String,
     creatorEmail: String,
     recipientName: String,
-    recipientEmail: String,
+    // recipientEmail: String,
     uniqueId: String,
     response: String
 });

@@ -7,14 +7,14 @@ const crypto = require('crypto');
 // Create a new proposal
 router.post('/create-proposal', async (req, res) => {
     try {
-        const { creatorName, creatorEmail, recipientName, recipientEmail } = req.body;
+        const { creatorName, creatorEmail, recipientName } = req.body;
         const uniqueId = crypto.randomBytes(8).toString('hex');
 
         const proposal = new Proposal({
             creatorName,
             creatorEmail,
             recipientName,
-            recipientEmail,
+            // recipientEmail,
             uniqueId,
             response: null
         });
